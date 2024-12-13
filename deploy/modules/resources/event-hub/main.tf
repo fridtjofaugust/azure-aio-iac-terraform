@@ -27,8 +27,7 @@ resource "azurerm_eventhub" "eventhub" {
   count = var.should_create_event_hub ? length(var.eventhub_names) : 0
 
   name                = var.eventhub_names[count.index]
-  namespace_name      = local.eventhub_name
-  resource_group_name = var.resource_group_name
+  namespace_id        = local.eventhub_namespace_id
   partition_count     = var.partition_count
   message_retention   = var.message_retention
 }
