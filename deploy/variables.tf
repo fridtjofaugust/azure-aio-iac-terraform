@@ -13,6 +13,12 @@ variable "location" {
   default = "westurope"
 }
 
+variable "subscription_id" {
+  type = string
+  default =  "c7c9a00c-1c06-4871-8811-b123a4fef645"
+  
+}
+
 variable "should_create_aio_onboard_sp" {
   description = "Creates a new Service Principal with 'Kubernetes Cluster - Azure Arc Onboarding' and 'Kubernetes Extension Contributor' roles for onboarding the new cluster to Arc."
   type        = bool
