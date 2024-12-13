@@ -5,8 +5,8 @@ on:
   #   branches:
   #     - main
   #   paths:
-  #     - 'cfg/**'
-  #     - '!cfg/script/**'
+  #     - 'deploy/**'
+  #     - '!deploy/script/**'
   workflow_dispatch:
 
 jobs:
@@ -22,10 +22,10 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - run: terraform init
-        working-directory: cfg/
+        working-directory: deploy/
 
       - name: Terraform plan
-        working-directory: cfg/
+        working-directory: deploy/
         run: terraform plan -out=./tfplan
         env:
           ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
