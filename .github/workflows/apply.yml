@@ -34,7 +34,7 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
 
       - name: Terraform apply
-        working-directory: cfg/
+        working-directory: deploy/
         run: terraform apply -auto-approve -input=false ./tfplan
         env:
           ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
