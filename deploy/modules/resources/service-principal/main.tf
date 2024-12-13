@@ -58,7 +58,7 @@ resource "azuread_application_password" "sp_onboard" {
 
   display_name      = "${var.name}-rbac"
   application_id    = "/applications/${local.app_reg_onboard_object_id}"
-  end_date = "2023-12-01T00:00:00Z" // valid until December 1, 2023, then must be rotated for continued use.
+  end_date = "2025-12-01T00:00:00Z" // valid until December 1, 2023, then must be rotated for continued use.
 }
 
 // AIO Service Principal which will have access to Key Vault
@@ -103,5 +103,5 @@ resource "azuread_application_password" "sp" {
 
   display_name      = "${var.name}-rbac"
   application_id    = "/applications/${local.app_reg_object_id}"
-  end_date = "2024-04-01T00:00:00Z" // valid until April 1, 2024, then must be rotated for continued use.
+  end_date = "2025-04-01T00:00:00Z" // valid until April 1, 2024, then must be rotated for continued use.
 }
