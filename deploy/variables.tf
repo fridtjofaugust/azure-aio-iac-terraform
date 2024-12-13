@@ -99,7 +99,7 @@ variable "should_use_event_grid" {
 variable "vm_size" {
   description = "(Optional) The size of the VM that will be deployed."
   type        = string
-  default     = "Standard_B2s"
+  default     = "Standard_D4_v4"
 }
 
 variable "vm_storage_account_type" {
