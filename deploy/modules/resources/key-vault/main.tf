@@ -10,7 +10,7 @@ data "azurerm_client_config" "current" {
 resource "azurerm_key_vault" "kv" {
   count = var.should_create_key_vault ? 1 : 0
 
-  name                = local.key_vault_name
+  name                = "${local.key_vault_name}-kv"
   location            = var.location
   resource_group_name = var.resource_group_name
   tenant_id           = data.azurerm_client_config.current.tenant_id
