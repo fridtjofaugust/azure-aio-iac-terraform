@@ -10,7 +10,7 @@ variable "name" {
 
 variable "location" {
   type    = string
-  default = "eastus2"
+  default = "westurope"
 }
 
 variable "should_create_aio_onboard_sp" {
@@ -93,7 +93,7 @@ variable "should_use_event_grid" {
 variable "vm_size" {
   description = "(Optional) The size of the VM that will be deployed."
   type        = string
-  default     = "Standard_D4_v4"
+  default     = "Standard_B2s"
 }
 
 variable "vm_storage_account_type" {

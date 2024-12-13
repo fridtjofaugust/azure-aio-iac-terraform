@@ -66,7 +66,7 @@ data "azurerm_client_config" "current" {
 module "resource_group" {
   source                       = "../resources/resource-group"
   should_create_resource_group = true
-
+  resource_group_name = "rg-${var.name}"
   name     = local.resource_name
   location = var.location
 }
